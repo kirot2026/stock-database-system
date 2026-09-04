@@ -1,0 +1,4 @@
+config.py
+__pycache__/config.cpython-311.pyc
+stock_database.db
+.DS_Store
