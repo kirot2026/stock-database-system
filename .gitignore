@@ -2,3 +2,7 @@ config.py
 __pycache__/config.cpython-311.pyc
 stock_database.db
 .DS_Store
+__pycache__/database.cpython-311.pyc
+.gitignore
+__pycache__/query_data.cpython-311.pyc
+__pycache__/import_data.cpython-311.pyc
