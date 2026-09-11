@@ -6,3 +6,5 @@ __pycache__/database.cpython-311.pyc
 .gitignore
 __pycache__/query_data.cpython-311.pyc
 __pycache__/import_data.cpython-311.pyc
+__pycache__/analysis.cpython-311.pyc
+__pycache__/compare.cpython-311.pyc
