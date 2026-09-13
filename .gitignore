@@ -8,3 +8,14 @@ __pycache__/query_data.cpython-311.pyc
 __pycache__/import_data.cpython-311.pyc
 __pycache__/analysis.cpython-311.pyc
 __pycache__/compare.cpython-311.pyc
+compare_result.json
+industry_result.json
+single_analysis_result.json
+__pycache__/draw.cpython-311.pyc
+.gitignore
+__pycache__/industry_analysis.cpython-311.pyc
+.gitignore
+__pycache__/save_data.cpython-311.pyc
+.gitignore
+main.py
+__pycache__/single_analysis.cpython-311.pyc

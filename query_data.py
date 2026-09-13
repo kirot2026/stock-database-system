@@ -18,7 +18,8 @@ def get_all_stocks():
 
 def get_stock_data(stock_code):
     conn=database.get_connection()
-    df=pd.read_sql('''SELECT stock_daily.code,
+    placeholders = ','.join(['?'] * len(stock_code))
+    sql=f'''SELECT stock_daily.code,
                    stock_info.stock,stock_info.industry,
                    stock_daily.date,stock_daily.open,
                    stock_daily.high,stock_daily.low,
@@ -28,7 +29,8 @@ def get_stock_data(stock_code):
                    FROM stock_daily 
                    JOIN stock_info 
                ON stock_daily.code=stock_info.code 
-               WHERE stock_daily.code=?''',conn,params=(stock_code,))
+               WHERE stock_daily.code IN ({placeholders})'''
+    df=pd.read_sql(sql,conn,params=tuple(stock_code))
     conn.close()
     return df
 

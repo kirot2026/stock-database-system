@@ -25,6 +25,6 @@ def compare_stocks(df):
     df=df.sort_values('波动率',ascending=False)
     df['区间波动率排名']=range(1,len(df)+1)
     df=df[['股票','区间收益率','最大涨幅','最大跌幅','波动率','最大回撤','区间收益率排名','区间波动率排名']]
-    results=df.to_dict('records')
+    results = df.set_index('股票').to_dict('index')
     print(df.to_string(formatters={"区间收益率":"{:}%".format,"最大涨幅":"{:}%".format,"最大跌幅":"{:}%".format,"波动率":"{:}%".format,"最大回撤":"{:}%".format}))
     return df,results

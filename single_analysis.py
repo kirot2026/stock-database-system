@@ -3,8 +3,10 @@ def analyze_stock(df):
     code=df["code"][0]
     name=df["stock"][0]
     industry=df["industry"][0]
+    start_date=df["date"].iloc[0]
+    end_date=df["date"].iloc[-1]
     trate_date=len(df)
-    basic_info={"股票代码":code,"股票名称":name,"所属行业":industry,"交易天数":trate_date}
+    basic_info={"股票代码":code,"股票名称":name,"所属行业":industry,"起始日期":start_date,"终止日期":end_date,"交易天数":trate_date}
     max_close=df["close"].max()
     min_close=df["close"].min()
     avg_close=df["close"].mean()
