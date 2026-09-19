@@ -66,6 +66,7 @@ Example:
 | :--- | :--- | :--- | :--- | :--- |
 | 600519 | Kweichow Moutai | Beverage | 2025-01-02 | 2025-12-31 |
 | 000858 | Wuliangye | Beverage | 2025-01-02 | 2025-12-31 |
+
 This provides a concise overview of the database without printing the entire daily dataset.
 
 ⸻
