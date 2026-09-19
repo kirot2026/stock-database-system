@@ -15,11 +15,4 @@ def save_or_print(filename,dict):
                 print(f"{key}：{value}")
         print("=" * 30)
 
-# def print_result(dict):
-#     print("\n========== 分析结果 ==========")
-#     for category, values in dict.items():
-#         print(f"\n【{category}】")
-#         for key, value in values.items():
-#             print(f"{key}：{value}")
-#     print("=" * 30)
 

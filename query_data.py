@@ -1,22 +1,20 @@
 import sqlite3
 import pandas as pd 
 import database
-def get_all_stocks():
+def get_stock_info():
     conn=database.get_connection()
-    df=pd.read_sql('''SELECT stock_daily.code,
-                   stock_info.stock,stock_info.industry,
-                   stock_daily.date,stock_daily.open,
-                   stock_daily.high,stock_daily.low,
-                   stock_daily.close,stock_daily.pre_close,
-                   stock_daily.change,stock_daily.pct_change,
-                   stock_daily.volume,stock_daily.amount
-               FROM stock_daily 
-               JOIN stock_info 
-               ON stock_daily.code=stock_info.code''',conn)
-    conn.close()
+    df = pd.read_sql('''SELECT stock_info.code,
+           stock_info.stock,
+           stock_info.industry,
+           MIN(stock_daily.date) AS start_date,
+           MAX(stock_daily.date) AS end_date
+    FROM stock_info
+    LEFT JOIN stock_daily 
+    ON stock_info.code = stock_daily.code
+    GROUP BY stock_info.code, stock_info.stock, stock_info.industry''', conn)
     return df
 
-def get_stock_data(stock_code):
+def get_more_stock_data(stock_code):
     conn=database.get_connection()
     placeholders = ','.join(['?'] * len(stock_code))
     sql=f'''SELECT stock_daily.code,

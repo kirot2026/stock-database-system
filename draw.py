@@ -30,4 +30,5 @@ def draw_candle(df):
     df['RSI']=calculate_RSI(df)
     ap=mpf.make_addplot(df['RSI'],panel=2,color='purple',ylabel='RSI')
     mpf.plot(df,type='candle',volume=True,mav=(5,20),figsize=(14,6),addplot=[ap],style='yahoo')
+    
  
