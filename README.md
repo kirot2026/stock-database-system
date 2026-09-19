@@ -59,7 +59,9 @@ The query result includes:
 * Industry
 * Earliest available trading date
 * Latest available trading date
+
 Example:
+
 | Code | Stock | Industry | Start Date | End Date |
 | :--- | :--- | :--- | :--- | :--- |
 | 600519 | Kweichow Moutai | Beverage | 2025-01-02 | 2025-12-31 |
@@ -223,7 +225,9 @@ Typical fields include:
 code
 stock
 industry
+
 Example:
+
 | Code | Stock | Industry |
 | :--- | :--- | :--- |
 | 600519 | Kweichow Moutai | Beverage |
@@ -280,6 +284,7 @@ Data Formats
 
 7. Main Program
 The program provides the following command-line menu:
+```text
 ====================
 Stock Data Analysis Database
 ====================
@@ -290,7 +295,7 @@ Stock Data Analysis Database
 4. Compare Multiple Stocks
 5. Industry Stock Analysis
 6. Exit
-
+```
 ⸻
 
 7.1 Initialize Database
