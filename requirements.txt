@@ -1,0 +1,5 @@
+matplotlib==3.11.1
+mplfinance==0.12.10b0
+numpy==2.4.6
+pandas==3.0.5
+tushare==1.4.29

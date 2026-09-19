@@ -195,6 +195,7 @@ stock-data-analysis-database/
 │   industry_comparison.png
 │
 ├── README.md
+├── requirements.txt
 └── .gitignore
 ```
 ## File Description
